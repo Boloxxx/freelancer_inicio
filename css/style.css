@@ -9,6 +9,11 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -24,4 +29,58 @@ body {
 .titulo span {
     font-size: 2rem;
     
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.nagevacion-principal {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media (min-width: 768px) {
+    .nagevacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.nagevacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.nagevacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero {
+    background-image: url(/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    right: 0;
 }
